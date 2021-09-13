@@ -1,13 +1,7 @@
 class BooksController < ApplicationController
-  def index
+  def create
   end
 
-  def show
-  end
-
-  def new
-  end
-
-  def edit
+  def update
   end
 end
