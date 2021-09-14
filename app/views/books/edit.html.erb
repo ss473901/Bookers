@@ -1,2 +1,33 @@
-<h1>Books#edit</h1>
-<p>Find me in app/views/books/edit.html.erb</p>
+<html>
+  <head>
+    <link rel="stylesheet" media="all" href="/assets/application-d12397cbc3a266ce5a99f7b588223090c55ca04a439953bb5f9304395de93fc3.css" data-turbolinks-track="reload">
+    <script src="/assets/application-114264dd93c8ff30e4335b71eed7949d66c4e7a8eb62e2de6284c046fe07104b.js" data-turbolinks-track="reload"></script>
+    <title>WebCampBackendNew</title><meta name="csrf-param" content="authenticity_token">
+    <meta name="csrf-token" content="e8+pUpP8e2xXCovwOw20eNJmRpL/FQEdIo0slTZRRWuSTQIaOR7WodX+8rtmOGVZpDk5Rn2RWIeTKZe4yPnKMw==">
+  </head>
+
+  <body>
+    <h1>Editing Book</h1>
+    
+    <form class="edit_book" id="edit_book_20938" action="/books/20938" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="RKnqm0/AOXVA6ACsyJZCanto1yjApIlEEt+0fcS4n+25pKUJBBKGAb5xln1/9eza3tjDn4nV9tNYVO/AoOivSg==">
+    
+      <div class="field">
+        <label for="book_title">Title</label>
+        <input class="book_title" type="text" value="a" name="book[title]" id="book_title">
+      </div>
+
+      <div class="field">
+        <label for="book_body">Body</label>
+        <textarea class="book_body" name="book[body]" id="book_body">s</textarea>
+      </div>
+
+      <div class="actions">
+        <input type="submit" name="commit" value="Update Book" data-disable-with="Update Book">
+      </div>
+    </form>
+
+    <a class="show_20938" href="/books/20938">Show</a> |
+    <a class="back" href="/books">Back</a>
+
+  </body>
+</html>
