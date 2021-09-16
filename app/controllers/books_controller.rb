@@ -7,11 +7,11 @@ end
 
 def create
   book = Book.new(book_params)
-  if book.save
-    redirect_to book_path(book)
-  else
-    render:new
-  end
+    if book.save
+      redirect_to book_path(book), notice: 'Book was successfully created.'
+    else                    
+      render ("books/index")
+    end
   
 end
 
@@ -21,13 +21,16 @@ end
 
 def edit
   @book = Book.find(params[:id])
-  flash[:notice] = "Book was successfully updated."
 end
 
 def update
   book = Book.find(params[:id])
-  book.update(book_params)
-  redirect_to book_path(book.id)
+  if book.update(book_params)
+    redirect_to book_path(book.id), notice: 'Book was successfully updated.'
+  else                    
+    render ("books/index")
+  end
+  
 end
 
 def destroy

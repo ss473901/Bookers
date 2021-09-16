@@ -9,9 +9,9 @@
       <tr>
         <td><%= book.title %></td>
         <td><%= book.body %></td>
-        <td><%= link_to"show", book_path(book) %></td>
-        <td><%= link_to"edit", edit_book_path(book) %></td>
-        <td><%= link_to"destroy", book_path(book), method: :delete%></td>
+        <td><%= link_to"Show", book_path(book) %></td>
+        <td><%= link_to"Edit", edit_book_path(book) %></td>
+        <td><%= link_to"Destroy", book_path(book), method: :delete%></td>
     </tr>
     <% end %>
 </table>
@@ -24,7 +24,6 @@
     <%= message %>
   <% end %>
 <% end %>
-
 
 <%= form_with model: @book,  local:true do |f| %>
   <h4>Title</h4>
