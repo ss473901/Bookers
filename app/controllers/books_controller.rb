@@ -7,8 +7,12 @@ end
 
 def create
   book = Book.new(book_params)
-  book.save
-  redirect_to book_path(book)
+  if book.save
+    redirect_to book_path(book)
+  else
+    render:new
+  end
+  
 end
 
 def show
@@ -17,6 +21,7 @@ end
 
 def edit
   @book = Book.find(params[:id])
+  flash[:notice] = "Book was successfully updated."
 end
 
 def update
@@ -28,9 +33,8 @@ end
 def destroy
   book = Book.find(params[:id])
   book.destroy
-  redirect_to books_index_path
-
-
+  redirect_to books_path
+  
 end
 
 
